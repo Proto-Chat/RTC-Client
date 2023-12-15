@@ -2,7 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import io from 'socket.io-client';
 import Peer from 'simple-peer';
 
-const SERVER_URL = process.env.SERVER_URL || 'http://localhost:8000';
+const SERVER_URL = (window.location.origin.includes('localhost')) ?  'http://localhost:8000' : process.env.SERVER_URL;
+
+if (!SERVER_URL) throw "SERVER URL NOT FOUND";
 
 
 function App() {

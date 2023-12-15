@@ -5,7 +5,7 @@ import Peer from 'simple-peer';
 const SERVER_URL = (process.env.SERVER_URL) ? process.env.SERVER_URL : 'http://localhost:8000';
 console.log("CONNECTING TO IO SERVER AT:", SERVER_URL);
 
-if (!SERVER_URL) throw "SERVER URL NOT FOUND";
+// if (!SERVER_URL) throw "SERVER URL NOT FOUND";
 
 
 function App() {
